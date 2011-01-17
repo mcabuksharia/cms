@@ -1,0 +1,62 @@
+
+<%= form_tag :action => 'show' %>
+<h3>You are watching : <%= h @guestfaculty.name %></h3>
+    <p>
+		<b>jobprofile_id:</b>
+<%= h @guestfaculty.jobprofile_id %>
+	</p>
+	 
+	<p>
+		<b>Name:</b>
+<%= h @guestfaculty.name %>
+	</p>
+	<p>
+		<b>DOB:</b>
+<%= h @guestfaculty.dob %>
+	</p>
+		<p>
+			<b>Sex:</b>
+			<%=h @guestfaculty.sex %>
+		</p>
+		<p>
+		<b>Designation:</b>
+<%= h @guestfaculty.designation %>
+	</p>
+	
+	<p>
+		<b>Joining Date:</b>
+<%= h @guestfaculty.joining_date %>
+	</p>
+	
+	<p>
+		<b>Leaving Date:</b>
+<%= h @guestfaculty.leaving_date %>
+	</p>
+	
+	<p>
+		<b>Status:</b>
+<%= h @guestfaculty.status %>
+	</p>
+	
+	<p>
+		<b>address:</b>
+<%= h @guestfaculty.address %>
+	</p>
+	
+	<p>
+		<b>Email_id:</b>
+<%= h @guestfaculty.email_id %>
+	</p>
+	
+	<p>
+	 <b>Contact No:</b>
+			<%=h @guestfaculty.contact_no %>
+		</p>
+<%= link_to 'Back', {:action => 'Back'} %>
+
+<b> <%= link_to 'Delete', {:action => 'delete', :id => @guestfaculty}, :confirm => "Are you sure to delete this item ?" %></b>
+
+<b> <%= link_to 'Edit', {:action => "edit", :id => @guestfaculty} %></b>
+
+
+<%= form_tag :action => 'searchbyname' %>

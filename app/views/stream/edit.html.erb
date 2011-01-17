@@ -1,0 +1,8 @@
+<h1>Update here</h1>
+<%=form_tag :action => 'update', :id =>@stream %>
+<p><label for ="streams_stream_name">Stream</label>:
+<%= text_field 'stream', 'stream_name' %></p>
+<%= submit_tag 'Save Changes' %>
+<%= link_to 'Back',{:action => "show", :id => @stream} -%>
+
+

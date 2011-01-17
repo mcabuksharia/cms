@@ -1,0 +1,13 @@
+<%= form_tag :action => 'show' %>
+
+<h3>You are watching : <%= h @jobprofile.jobprofile %></h3>
+    <p>
+		<b>jobprofile:</b>
+<%= h @jobprofile.jobprofile %>
+	</p>
+
+<%= link_to 'Back', {:action => 'list'} %>
+
+<b> <%= link_to 'Delete', {:action => 'delete', :id => @jobprofile}, :confirm => "Are you sure to delete this item ?" %></b>
+
+<b> <%= link_to 'Edit', {:action => "edit", :id => @jobprofile} %></b>

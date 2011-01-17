@@ -1,0 +1,6 @@
+<h1>Update here</h1>
+<%=form_tag :action => 'update', :id =>@course %>
+<p><label for ="courses_course_name">Course</label>:
+<%= text_field 'course', 'course_name' %></p>
+<%= submit_tag 'Save Changes' %>
+<%= link_to 'Back',{:action => "show", :id => @course} -%>

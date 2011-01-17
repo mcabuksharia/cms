@@ -1,0 +1,16 @@
+<% if @semesters.blank? %>
+<p>There are no one course currently in the system.</p>
+<% else %>
+<p>These are the current course in our system</p>
+<ul id="semesters">
+<% @semesters.each do |c| %>
+<li><%= link_to c.semester, {:action => 'show', :id => c.id} %></li>
+<% end %>
+</ul>
+<% end %>
+<p><%= link_to "Add new course", {:action => 'new' } %></p><%= link_to 'Back',:action =>'new' %>
+
+<%= form_tag :action => 'search' %>
+Search Here:<%= text_field_tag(:id) %><%= submit_tag 'search' %></p></p>
+
+

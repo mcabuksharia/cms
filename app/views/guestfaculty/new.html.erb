@@ -1,0 +1,34 @@
+<h1>Please register here</h1>
+<div id="show_item"></div>
+<%=form_remote_tag :url => {:action => 'create' },
+:update => "show_item",
+:complete => visual_effect(:highlight, "show_item") %>
+<%= error_messages_for :guestfaculty %>
+<p><label for ="guestfaculties_jobprofile_id">Jobprofile id</label>:
+<%= text_field 'guestfaculty','jobprofile_id' %></p>
+<p><label for ="guestfaculties_name">Name</label>:
+<%= text_field 'guestfaculty','name' %></p>
+<p><lable for ="guestfaculties_dob">DOB</label>:
+<%= text_field 'guestfaculty','dob' %></p>
+<p><label for ="guestfaculties_sex">Sex</label>:
+<%= text_field 'guestfaculty','sex' %></p>
+<p><label for ="guestfaculties_designation">Designation</label>:
+<%= text_field 'guestfaculty','designation' %></p>
+<p><label for ="guestfaculties_joining_date">Joining Date</label>:
+<%= text_field 'guestfaculty','joining_date' %></p>
+<p><label for ="guestfaculties_leaving_date">Leaving Date</label>:
+<%= text_field 'guestfaculty','leaving_date' %></p>
+<p><label for ="guestfaculties_status">Status</label>:
+<%= text_field 'guestfaculty','status' %></p>
+<p><label for ="guestfaculties_address">Address</label>:
+<%= text_field 'guestfaculty','address' %></p>
+<p><label for ="guestfaculties_email_id">Email id</label>:
+<%= text_field 'guestfaculty','email_id' %></p>
+<p><label for ="guestfaculties_contact_no">Contact No</label>:
+<%= text_field 'guestfaculty','contact_no' %></p>
+<%= submit_tag 'create' %><%= link_to 'Back',:action=>'Back1'%>
+
+
+
+
+

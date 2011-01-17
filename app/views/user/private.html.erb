@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>College Management System</title>
+	</head>
+	<body>
+		<h2 align="center">College Management System</h2>
+<table cellpadding="47px">
+<tr>
+<td><%= link_to 'Home'%></td>
+<td><%= link_to 'About Us' %></td><td><%= link_to 'Alumni' %></td><td><%= link_to 'Director Message' 
+%></td><td><%= link_to 'Contact Us' %></td>
+<td><%= link_to 'Logout',{:action => 'logout'}%></td><td></tr>
+</table>
+<h3>You are most welcome : </h3>
+<!--#displays hello (username)-->
+hello <strong><%=session[:registration_id]%></strong>.
+		<%= form_tag :action => 'search' %>
+Search Here:<%= text_field_tag(:id) %><%= submit_tag 'search' %></p></p>
+<%= @content_for_layout %>
+		</body>
+</html>

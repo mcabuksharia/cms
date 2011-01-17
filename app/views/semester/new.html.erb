@@ -1,0 +1,19 @@
+<h1>Please Enter Semester Here</h1>
+<div id="show_item"></div>
+<%=form_remote_tag :url => {:action => 'create' },
+:update => "show_item",
+:complete => visual_effect(:highlight, "show_item") %>
+<%= error_messages_for :semester %>
+<p><label for ="streams_course_id">Choose Course</label>:
+<%= collection_select(:stream,:course_id,Course.all,:id,:course_name,:prompt=>true) %></p>
+<p><label for ="semesters_stream_id">Choose Stream</label>:
+<%= collection_select(:semester,:stream_id,Stream.all,:course_id,:stream_name,:prompt=>true) %></p>
+<p><label for ="semesters_semester">Semester</label>:
+<%= text_field 'semester', 'semester' %></p>
+
+<%= submit_tag 'create' %>
+<%= link_to 'Back',{:action=>'Back'}%> <%= link_to 'Search Here',{:action=>'find'}%>
+
+
+
+

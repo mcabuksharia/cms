@@ -1,0 +1,13 @@
+<%= form_tag :action => 'show' %>
+
+<h3>You are watching : <%= h @semester.semester %></h3>
+    <p>
+		<b>semester:</b>
+<%= h @semester.semester %>
+	</p>
+
+<%= link_to 'Back', {:action => 'list'} %>
+
+<b> <%= link_to 'Delete', {:action => 'delete', :id => @semester}, :confirm => "Are you sure to delete this item ?" %></b>
+
+<b> <%= link_to 'Edit', {:action => "edit", :id => @semester} %></b>

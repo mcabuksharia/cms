@@ -1,0 +1,35 @@
+<%= form_tag :action => 'show' %>
+<h3>You are watching : <%= h @registration.user_name %></h3>
+<p>
+	<b>UserName:</b>
+<%= h @registration.user_name %>
+	</p>
+	<p>
+		<b>Role:</b>
+		<%=h @registration.role %>
+		</p>
+		<p>
+			<b>EmailId:</b>
+			<%=h @registration.email_id %>
+		</p>
+		<p>
+			<b>Contact No:</b>
+			<%=h @registration.contact_no %>
+		</p>
+<p>
+	<b>password:</b>
+	<%=h @registration.password %>
+</p>
+
+<p>
+	<b>Confirm Password:</b>
+	<%=h @registration.confirm_password %>
+</p>
+<%= link_to 'Back', {:action => 'private'} %>
+
+<b> <%= link_to 'Delete', {:action => 'delete', :id => @registration}, :confirm => "Are you sure to delete this item ?" %></b>
+
+<b> <%= link_to 'Edit', {:action => "edit", :id => @registration} %></b>
+
+
+<%= form_tag :action => 'searchbyname' %>

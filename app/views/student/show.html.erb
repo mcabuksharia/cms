@@ -1,0 +1,38 @@
+<%= form_tag :action => 'show' %>
+<h3>You are watching : <%= h @student.name %></h3>
+<p>
+	<b>Name:</b>
+<%= h @student.name %>
+	</p>
+	<p>
+		<b>DOB:</b>
+		<%=h @student.dob %>
+		</p>
+		<p>
+			<b>Sex:</b>
+			<%=h @student.sex %>
+		</p>
+		<p>
+			<b>Local Address:</b>
+			<%=h @student.local_add %>
+		</p>
+		<p>
+			<b>Permanent Address:</b>
+			<%=h @student.permanent_add %>
+		</p>
+		<p>
+			<b>Email id:</b>
+			<%=h @student.email_id %>
+		</p>
+		<p>
+			<b>Contact No:</b>
+			<%=h @student.contact_no %>
+		</p>
+<%= link_to 'Back', {:action => 'Back'} %>
+
+<b> <%= link_to 'Delete', {:action => 'delete', :id => @student}, :confirm => "Are you sure to delete this item ?" %></b>
+
+<b> <%= link_to 'Edit', {:action => "edit", :id => @student} %></b>
+
+
+<%= form_tag :action => 'searchbyname' %>

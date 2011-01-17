@@ -1,0 +1,16 @@
+<% if @jobprofiles.blank? %>
+<p>There are no one job profile currently in the system.</p>
+<% else %>
+<p>These are the current jobprofiles in our system</p>
+<ul id="jobprofiles">
+<% @jobprofiles.each do |c| %>
+<li><%= link_to c.jobprofile, {:action => 'show', :id => c.id} %></li>
+<% end %>
+</ul>
+<% end %>
+<p><%= link_to "Add new jobprofile", {:action => 'new' } %></p>
+
+<%= form_tag :action => 'search' %>
+Search Here:<%= text_field_tag(:id) %><%= submit_tag 'search' %></p></p>
+
+

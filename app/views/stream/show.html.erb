@@ -1,0 +1,13 @@
+<%= form_tag :action => 'show' %>
+
+<h3>You are watching : <%= h @stream.stream_name %></h3>
+    <p>
+		<b>stream:</b>
+<%= h @stream.stream_name %>
+	</p>
+
+<%= link_to 'Back', {:action => 'list'} %>
+
+<b> <%= link_to 'Delete', {:action => 'delete', :id => @stream}, :confirm => "Are you sure to delete this item ?" %></b>
+
+<b> <%= link_to 'Edit', {:action => "edit", :id => @stream} %></b>

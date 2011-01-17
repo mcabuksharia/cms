@@ -1,0 +1,22 @@
+<% if @students.blank? %>
+<p>There are no one Student registered yet.</p>
+<% else %>
+<p>Total registered Students are:</p>
+<ul id="students">
+<% @students.each do |c| %>
+<li><%= link_to c.name, {:action => 'show', :id => c.id} -%>	
+</li>
+<% end %>
+</ul>
+<% end %>
+<p><%= link_to "Register here", {:action => 'new' }%></p>
+<%= link_to 'Back', {:action => 'new'}%>
+<%= form_tag :action => 'search' %>
+Search Here:<%= text_field_tag(:id) %><%= submit_tag 'search' %></p></p>
+
+
+
+
+
+
+

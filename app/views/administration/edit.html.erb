@@ -1,0 +1,29 @@
+<h1>Please registered here</h1>
+<%=form_tag :action => 'update', :id =>@administration %>
+<p><label for ="administrations_jobprofile_id">Jobprofile id</label>:
+<%= text_field 'administration','jobprofile_id' %></p>
+<p><label for ="administrations_job_profile">Job Profile</label>:
+<%= text_field 'administration','jobprofile' %></p>
+<p><label for ="administrations_name">Name</label>:
+<%= text_field 'administration','name' %></p>
+<p><lable for ="administrations_dob">DOB</label>:
+<%= text_field 'administration','dob' %></p>
+<p><label for ="administrations_sex">Sex</label>:
+<%= text_field 'administration','sex' %></p>
+<p><label for ="administrations_designation">Designation</label>:
+<%= text_field 'administration','designation' %></p>
+<p><label for ="administrations_joining_date">Joining Date</label>:
+<%= text_field 'administration','joining_date' %></p>
+<p><label for ="administrations_leaving_date">Leaving Date</label>:
+<%= text_field 'administration','leaving_date' %></p>
+<p><label for ="administrations_status">Status</label>:
+<%= text_field 'administration','status' %></p>
+<p><label for ="administrations_address">Address</label>:
+<%= text_field 'administration','address' %></p>
+<p><label for ="administrations_email_id">Email id</label>:
+<%= text_field 'administration','email_id' %></p>
+<p><label for ="administrations_contact_no">Contact No</label>:
+<%= text_field 'administration','contact_no' %></p>
+<%= submit_tag 'Save Changes' %><%= link_to 'Back',{:action => "show", :id => @administration} -%>
+
+

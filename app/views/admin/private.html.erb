@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>College Management System</title>
+	 <%= javascript_include_tag "defaults" %>
+	  <%= javascript_include_tag "prototype" %>
+	</head>
+	<body>
+		<div id='header'>
+		<h2 align="center">College Management System</h2>
+<table cellpadding="46px">
+<tr>
+<td><%= link_to 'Home'%></td>
+<td><%= link_to 'About Us' %></td><td><%= link_to 'Alumni' %></td><td><%= link_to 'Director Message' 
+%></td><td><%= link_to 'Contact Us' %></td>
+<td><%= link_to 'Create New Account',{:action => 'new'}%></td>
+<td><%= link_to 'Logout',{:action => 'logout'}%></td><td></tr>
+</table>
+</div>
+
+
+
+
+<div id ='form1'>
+<h3>You are most welcome : </h3>
+<!--#displays hello (username)-->
+hello <strong><%=session[:registration_id]%></strong>.
+		<%= form_tag :action => 'search' %>
+Search Here:<%= text_field_tag(:search) %> <%=submit_tag'Search' %><br/>
+
+<%=observe_field( :search,
+              :url=>{:action=>'listu'},
+              :frequency=>3,
+              :with =>'username',
+              :update =>:form1 )%>
+</div>
+<div id= "sidebar">
+	<%=link_to_remote("Job Profile",:update =>"content",:position=>'top',:url =>{:controller =>'jobprofile',:action=>'new'}) %><br/>
+	<%=link_to_remote("Student Registration",:update =>"content",:position=>'top',:url =>{:controller =>'student',:action=>'new'}) %><br/>
+	<%=link_to_remote("Course",:update =>"content",:position=>'top',:url =>{:controller =>'course',:action=>'new'}) %><br/>
+	<%=link_to_remote("Stream",:update =>"content",:position=>'top',:url =>{:controller =>'stream',:action=>'new'}) %><br/>
+    <%=link_to_remote("Semester",:update =>"content",:position=>'top',:url =>{:controller =>'semester',:action=>'new'}) %><br/>
+    <%=link_to_remote("Administration Dept.",:update =>"content",:position=>'top',:url =>{:controller =>'administration',:action=>'new'}) %><br/>
+    <%= link_to "Teaching Faculty",{:action => "teacher"} %><br/>
+    <%= link_to "Guest Faculty",{:action => "guest"} %>
+</div>
+<div id='content'>
+	<%=image_tag 'colleges.jpeg'%>
+</div>
+<div id='footer'>
+	this is footer
+</div>	
+<%= @content_for_layout %>
+
+		</body>
+</html>

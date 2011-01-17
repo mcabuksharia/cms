@@ -1,0 +1,11 @@
+<p>Total searched users are:</p>
+<ul id="registrations">
+<% @registrations.each do |c| %>
+<li>
+<%= link_to c.user_name, {:action => "show", :id => c.id} -%>
+<b> <%= link_to 'Edit', {:action => "edit", :id => c.id} %></b>
+</li>
+</ul>
+<% end %>
+
+<%= link_to 'Back', {:action => 'list'} %>

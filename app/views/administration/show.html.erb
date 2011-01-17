@@ -1,0 +1,66 @@
+
+<%= form_tag :action => 'show' %>
+<h3>You are watching : <%= h @administration.name %></h3>
+    <p>
+		<b>jobprofile_id:</b>
+<%= h @administration.jobprofile_id %>
+	</p>
+	 
+	<p>
+		<p>
+		<b>Job Profile:</b>
+<%= h @administration.jobprofile %>
+	</p>
+		<b>Name:</b>
+<%= h @administration.name %>
+	</p>
+	<p>
+		<b>DOB:</b>
+<%= h @administration.dob %>
+	</p>
+		<p>
+			<b>Sex:</b>
+			<%=h @administration.sex %>
+		</p>
+		<p>
+		<b>Designation:</b>
+<%= h @administration.designation %>
+	</p>
+	
+	<p>
+		<b>Joining Date:</b>
+<%= h @administration.joining_date %>
+	</p>
+	
+	<p>
+		<b>Leaving Date:</b>
+<%= h @administration.leaving_date %>
+	</p>
+	
+	<p>
+		<b>Status:</b>
+<%= h @administration.status %>
+	</p>
+	
+	<p>
+		<b>address:</b>
+<%= h @administration.address %>
+	</p>
+	
+	<p>
+		<b>Email_id:</b>
+<%= h @administration.email_id %>
+	</p>
+	
+	<p>
+	 <b>Contact No:</b>
+			<%=h @administration.contact_no %>
+		</p>
+<%= link_to 'Back', {:action => 'list'} %>
+
+<b> <%= link_to 'Delete', {:action => 'delete', :id => @administration}, :confirm => "Are you sure to delete this item ?" %></b>
+
+<b> <%= link_to 'Edit', {:action => "edit", :id => @administration} %></b>
+
+
+<%= form_tag :action => 'searchbyname' %>

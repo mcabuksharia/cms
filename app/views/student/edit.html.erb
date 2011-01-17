@@ -1,0 +1,22 @@
+<h1>Please registered here</h1>
+<%=form_tag :action => 'update', :id =>@student %>
+<p><label for ="students_name">Name</label>:
+<%= text_field 'student', 'name' %></p>
+<p><label for ="students_dob">DOB</label>:
+<%= text_field 'student', 'dob' %></p>
+<p><lable for ="students_sex">Sex</label>:
+<%= text_field 'student','sex' %></p>
+<p><label for ="students_local_add">Local Address</label>:
+<%= text_field 'student','local_add' %></p>
+<p><label for ="students_permanent_add">Permanent Address</label>:
+<%= text_field 'student','permanent_add' %></p>
+<p><lable for ="students_email_id">Email Id</label>:
+<%= text_field 'student','email_id' %></p>
+<p><label for ="students_contact_no">Contact No</label>:
+<%= text_field 'student','contact_no' %></p>
+<%= submit_tag 'Save Changes' %><%= link_to 'Back',:action=>'show', :id=>@student%>
+
+
+
+
+

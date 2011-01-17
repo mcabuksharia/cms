@@ -1,0 +1,34 @@
+<h1>Please register here</h1>
+<div id="show_item"></div>
+<%=form_remote_tag :url => {:action => 'create' },
+:update => "show_item",
+:complete => visual_effect(:highlight, "show_item") %>
+<%= error_messages_for :teacher %>
+<p><label for ="teachers_jobprofile_id">Jobprofile id</label>:
+<%= text_field 'teacher','jobprofile_id' %></p>
+<p><label for ="teachers_name">Name</label>:
+<%= text_field 'teacher','name' %></p>
+<p><lable for ="teachers_dob">DOB</label>:
+<%= text_field 'teacher','dob' %></p>
+<p><label for ="teachers_sex">Sex</label>:
+<%= text_field 'teacher','sex' %></p>
+<p><label for ="teachers_designation">Designation</label>:
+<%= text_field 'teacher','designation' %></p>
+<p><label for ="teachers_joining_date">Joining Date</label>:
+<%= text_field 'teacher','joining_date' %></p>
+<p><label for ="teachers_leaving_date">Leaving Date</label>:
+<%= text_field 'teacher','leaving_date' %></p>
+<p><label for ="teachers_status">Status</label>:
+<%= text_field 'teacher','status' %></p>
+<p><label for ="teachers_address">Address</label>:
+<%= text_field 'teacher','address' %></p>
+<p><label for ="teachers_email_id">Email id</label>:
+<%= text_field 'teacher','email_id' %></p>
+<p><label for ="teachers_contact_no">Contact No</label>:
+<%= text_field 'teacher','contact_no' %></p>
+<%= submit_tag 'create' %><%= link_to 'Back',:action=>'Back1'%>
+
+
+
+
+

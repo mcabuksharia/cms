@@ -1,0 +1,33 @@
+<h1>Please register here</h1>
+<div id="show_item"></div>
+<%=form_remote_tag :url => {:action => 'create' },
+:update => "show_item",
+:complete => visual_effect(:highlight, "show_item") %>
+<%= error_messages_for :administration %>
+<p><label for ="administrations_jobprofile_id">Choose Job Profile</label>:
+<%= collection_select(:administration,:jobprofile_id,Jobprofile.all,:id,:jobprofile,:prompt=>true) %></p>
+<p><label for ="administrations_name">Name</label>:
+<%= text_field 'administration','name' %></p>
+<p><lable for ="administrations_dob">DOB</label>:
+<%= text_field 'administration','dob' %></p>
+<p><label for ="administrations_sex">Sex</label>:
+<%= text_field 'administration','sex' %></p>
+<p><label for ="administrations_designation">Designation</label>:
+<%= text_field 'administration','designation' %></p>
+<p><label for ="administrations_joining_date">Joining Date</label>:
+<%= text_field 'administration','joining_date' %></p>
+<p><label for ="administrations_leaving_date">Leaving Date</label>:
+<%= text_field 'administration','leaving_date' %></p>
+<p><label for ="administrations_status">Status</label>:
+<%= text_field 'administration','status' %></p>
+<p><label for ="administrations_address">Address</label>:
+<%= text_field 'administration','address' %></p>
+<p><label for ="administrations_email_id">Email id</label>:
+<%= text_field 'administration','email_id' %></p>
+<p><label for ="administrations_contact_no">Contact No</label>:
+<%= text_field 'administration','contact_no' %></p>
+<%= submit_tag 'create' %><%= link_to'Back',{:action => 'Back1'}%> <%= link_to'Search Here',{:action => 'find'}%>
+
+
+
+

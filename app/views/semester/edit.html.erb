@@ -1,0 +1,6 @@
+<h1>Update here</h1>
+<%=form_tag :action => 'update', :id =>@semester %>
+<p><label for ="semesters_semester">Semester</label>:
+<%= text_field 'semester', 'semester' %></p>
+<%= submit_tag 'Save Changes' %>
+<%= link_to 'Back',{:action => "show", :id => @semester} -%>

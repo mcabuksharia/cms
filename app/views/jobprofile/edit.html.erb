@@ -1,0 +1,6 @@
+<h1>Update here</h1>
+<%=form_tag :action => 'update', :id =>@jobprofile %>
+<p><label for ="jobprofiles_jobprofile">Job Profile</label>:
+<%= text_field 'jobprofile', 'jobprofile' %></p>
+<%= submit_tag 'Save Changes' %>
+<%= link_to 'Back',{:action => "show", :id => @jobprofile} -%>

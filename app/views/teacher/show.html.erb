@@ -1,0 +1,62 @@
+
+<%= form_tag :action => 'show' %>
+<h3>You are watching : <%= h @teacher.name %></h3>
+    <p>
+		<b>jobprofile_id:</b>
+<%= h @teacher.jobprofile_id %>
+	</p>
+	 
+	<p>
+		<b>Name:</b>
+<%= h @teacher.name %>
+	</p>
+	<p>
+		<b>DOB:</b>
+<%= h @teacher.dob %>
+	</p>
+		<p>
+			<b>Sex:</b>
+			<%=h @teacher.sex %>
+		</p>
+		<p>
+		<b>Designation:</b>
+<%= h @teacher.designation %>
+	</p>
+	
+	<p>
+		<b>Joining Date:</b>
+<%= h @teacher.joining_date %>
+	</p>
+	
+	<p>
+		<b>Leaving Date:</b>
+<%= h @teacher.leaving_date %>
+	</p>
+	
+	<p>
+		<b>Status:</b>
+<%= h @teacher.status %>
+	</p>
+	
+	<p>
+		<b>address:</b>
+<%= h @teacher.address %>
+	</p>
+	
+	<p>
+		<b>Email_id:</b>
+<%= h @teacher.email_id %>
+	</p>
+	
+	<p>
+	 <b>Contact No:</b>
+			<%=h @teacher.contact_no %>
+		</p>
+<%= link_to 'Back', {:action => 'Back'} %>
+
+<b> <%= link_to 'Delete', {:action => 'delete', :id => @teacher}, :confirm => "Are you sure to delete this item ?" %></b>
+
+<b> <%= link_to 'Edit', {:action => "edit", :id => @teacher} %></b>
+
+
+<%= form_tag :action => 'searchbyname' %>
